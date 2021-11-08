@@ -4,9 +4,14 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:wpf="http://oxyplot.org/skiawpf"
+		xmlns:skiaSharpTest="clr-namespace:SkiaSharpTest"
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800">
+	<Window.DataContext>
+		<skiaSharpTest:MainWindowViewModel />
+	</Window.DataContext>
+
 	<Grid>
-		<wpf:PlotView />
+		<wpf:PlotView Model="{Binding PlotViewModel}" />
 	</Grid>
 </Window>
